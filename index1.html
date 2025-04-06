@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simple Local Website</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    header {
+      background-color: #4a4a4a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    section {
+      padding: 20px;
+      background-color: white;
+      margin: 20px;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: #4a4a4a;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+    }
+
+    button {
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Simple Website</h1>
+    <p>Welcome to this offline demo page</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <section>
+    <h2>About</h2>
+    <p>This is a simple website that does not use any external resources or network requests.</p>
+    <button onclick="alert('Thanks for clicking!')">Click Me</button>
+  </section>
+
+  <section>
+    <h2>Contact Us</h2>
+    <form onsubmit="event.preventDefault(); alert('Form submission disabled for offline demo.');">
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name"><br />
+
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email"><br />
+
+      <label for="message">Message:</label><br />
+      <textarea id="message" name="message" rows="4"></textarea><br />
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Simple Website</p>
+  </footer>
+
+</body>
+</html>
